@@ -54,14 +54,18 @@ const App = () => {
   }]
 
   return (
-    <ScrollView horizontal>
-      {
-        data.map((data, index) => {
-          return (
-            <Card key={index} name={data.name} details={data.detail} price={data.price} />
-          )
-        })
-      }
+    <ScrollView 
+      horizontal 
+      pagingEnabled 
+      showsHorizontalScrollIndicator={false} 
+    >
+        {
+          data.map((data, index) => {
+            return (
+                <Card key={index} name={data.name} details={data.detail} price={data.price} />
+            )
+          })
+        }
     </ScrollView>
   )
 }
